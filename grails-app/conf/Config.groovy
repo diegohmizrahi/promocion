@@ -158,11 +158,12 @@ grails.plugins.springsecurity.interceptUrlMap = [
 	'/acp': ['ROLE_ADMIN' ,'IS_AUTHENTICATED_FULLY'],
 ]
 
+/*
 grails.plugins.springsecurity.auth.forceHttps = true
 grails.plugins.springsecurity.secureChannel.definition = [
 	'/**':'REQUIRES_SECURE_CHANNEL'
  ]
-
+*/
 
 
 jcaptchas {
