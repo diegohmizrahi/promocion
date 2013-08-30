@@ -80,7 +80,8 @@ environments {
     production {
         grails.logging.jul.usebridge = false
 				 grails.app.context = "/cinema"
-
+	  grails.dbconsole.enabled = true
+     
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
