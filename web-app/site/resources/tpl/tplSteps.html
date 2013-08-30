@@ -1,0 +1,10 @@
+<div ng-controller="reservationdddCtrl">
+
+ 	<div ng-include id="templates[0].name" ng-show="templates[0].state" style="float: left;"
+		ng-model="templates"  src="templates[0].url" ng-controller="reservationMovieCtrl"></div>
+	<div ng-include id="templates[1].name" ng-show="templates[1].state" 
+		ng-model="templates" src="templates[1].url" style="padding-left: 300px;"></div>
+	<div ng-include id="templates[2].name" ng-show="templates[2].state" 
+		ng-model="templates" src="templates[2].url"></div>
+</div>
+      

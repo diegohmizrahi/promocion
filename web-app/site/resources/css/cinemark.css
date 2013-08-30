@@ -1,0 +1,28 @@
+.gridMovies {
+	float: left;
+	width: 1120px;
+	padding: 10px 10px 10px 10px;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.titleMovie {
+	text-align: center;
+	font-size: 60px;
+	height: 50px;
+	font-family: cursive;
+	color: #1DAB70;
+}
+
+.labelMovie {
+	font-size: 20px;
+	color: #B40431;
+}
+
+.divInfoMovie {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

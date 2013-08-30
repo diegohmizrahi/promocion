@@ -1,0 +1,43 @@
+<script type="text/ng-template" id="resources/tpl/stepSelectSitie.html">
+ <div ng-controller="sitiesCtrl"> 
+	<div class="divInfoMovie">
+				<label class="labelMovie">Quantity:</label> 
+				<select id="stQuantity"
+					ng-model="quantitySelected"
+					ng-change="updateQuantitySelected(quantitySelected)"
+					ng-options="quantity.number for quantity in quantities">
+				<option style="display:none" value="">Select Method Payment</option>	
+				</select>
+	</div>
+	<div>
+		<div style="float: left;padding-right: 20px;">
+			<div id="divLeft" ng-style="{'width': sizeLeft}">
+				<span class="ng-scope" ng-repeat="sitie in sitiesLeft">
+					<img ng-src="{{sitie.url}}" width="20" height="20"
+					ng-click="updateSitie(sitie)">
+				</span>
+			</div>
+		</div>
+		<div style="float: left;padding-right: 20px;">
+			<div id="divLeft1" ng-style="{'width': sizeCenter}">
+				<span class="ng-scope" ng-repeat="sitie in sitiesCenter">
+					<img ng-src="{{sitie.url}}" width="20" height="20" 
+					ng-click="updateSitie(sitie)">
+				</span>
+			</div>
+		</div>
+		<div style="float: left;padding-right: 20px;">
+			<div id="divLeft2" ng-style="{'width': sizeRight}">
+				<span class="ng-scope" ng-repeat="sitie in sitiesRight">
+					<img ng-src="{{sitie.url}}" width="20" height="20"
+					ng-click="updateSitie(sitie)">
+				</span>
+			</div>
+		</div>
+	</div>
+<div>
+	 <a class="btn" ng-click="fin1(sitiesSelected)" ng-show="quantitySelected.number != 0 && quantitySelected.number == occupiedSession">NEXT</a>
+</div>
+</div>
+</script> 
+

@@ -1,0 +1,9 @@
+<div>
+
+ 	<div  class="pagination-centered" ng-include id="templates[0].name" ng-show="templates[0].state" 
+		ng-model="templates"  src="templates[0].url"></div>
+	<div ng-include id="templates[1].name" ng-show="templates[1].state" 
+		ng-model="templates" src="templates[1].url" ng-controller="reservationMovieCtrl"></div>
+	<div ng-include id="templates[1].name" ng-show="templates[2].state" 
+		ng-model="templates" src="templates[2].url"></div>
+</div>
