@@ -25,7 +25,11 @@ environments {
     }
     production {
         dataSource {
-          dbCreate = "update"
+            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+        
+/*
+		dbCreate = "update"
         driverClassName = "org.postgresql.Driver"
         dialect = org.hibernate.dialect.PostgreSQLDialect
     
@@ -35,6 +39,8 @@ environments {
 		
         username = uri.userInfo.split(":")[0]
         password = uri.userInfo.split(":")[1]
+		
+	*/
             }
         }
     }
