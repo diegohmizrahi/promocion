@@ -1,10 +1,11 @@
 package com.globallogic.cinemark
 
+import com.globallogic.cinemark.constants.Codes
 import org.springframework.dao.DataIntegrityViolationException
 
-class TheaterController {
+class TheaterController extends CinemarkController {
 
-    static allowedMethods = [create: ['GET', 'POST'], edit: ['GET', 'POST'], delete: 'POST']
+    static allowedMethods = [create: ['GET', 'POST'], edit: ['GET', 'POST'], delete: 'POST', getTheaters: 'GET']
 
     def index() {
         redirect action: 'list', params: params
@@ -18,7 +19,7 @@ class TheaterController {
     def create() {
 		switch (request.method) {
 		case 'GET':
-        	[theaterInstance: new Theater(params)]
+			[theaterInstance: new Theater(params)]
 			break
 		case 'POST':
 	        def theaterInstance = new Theater(params)
@@ -106,4 +107,17 @@ class TheaterController {
             redirect action: 'show', id: params.id
         }
     }
+	
+	def getTheaters = {
+		def resp = checkedOperation {
+			def theaters = Theater.list()
+			if (!theaters) {
+				response.setStatus(204)
+				[]
+			}else {
+				buildDTOList(theaters)
+			}
+		}
+		render resp
+	}
 }
