@@ -1,6 +1,6 @@
 //var url = "https://localhost:8443/cinemark/resources";
 //var url = "http://localhost:8080/cinemark/resources";
-var url = "./resources";
+var url = "../resources";
 app.constantsGlobal={
 
 		REST_THEATERS: url +'/theaters',
