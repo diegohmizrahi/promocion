@@ -1,45 +1,42 @@
-<script type="text/ng-template" id="resources/tpl/stepSelectPayment.html">
-<div ng-controller="paymentCtrl" style="float: left; width: 300px;"> 
-			<div >
-			<legend>You to choose</legend>
-			<div class="divInfoMovie" style="float: left; width: 120px;">
-				<label class="labelMovie">Theater</label> 
-				<label>{{filter.theaterSelected.name}}</label>
-			</div>
-			<div class="divInfoMovie" style="float: left; width: 120px;">
-				<label class="labelMovie">Movie</label> 
-				<label>{{filter.movieSelected.name}}</label>
-			</div>
-			<div class="divInfoMovie" style="float: left; width: 120px;">
-				<label class="labelMovie">Show Time</label> 
-				<label>{{filter.showTimeSelected.name}}</label>
-			</div>
-			<div class="divInfoMovie" style="float: left; width: 120px;">
-				<label class="labelMovie">Quantity:</label> 
-				<label>{{quantitySelected}}</label>
-			</div>
-			<div class="divInfoMovie" style="width: 120px;">
-				<label class="labelMovie">Sities:</label> 
-				<label>{{sitiesSelectedText}}</label>
-			</div>
-			<legend>Personal information</legend>
-			<form>
-			<div class="divInfoMovie">
-				<label class="labelMovie">Method Payment:</label> 
-				<select id="stMethodPayment"
-					ng-model="methodPaymentSelected"
-					ng-options="methodPayment.name for methodPayment in methodsPayment">
-				<option style="display:none" value="">Select Method Payment</option>	
-				</select>
-			</div>
-			<div class="input-prepend">
-				<label class="labelMovie">Email:</label> 
-                <input type="text"></input>
-                <!--span class="add-on">@</span-->
-            </div>
- 				<td><a class="btn" ng-click="end(methodPaymentSelected)" ng-show="methodPaymentSelected">END</a></td>
-			</form>
-			</div>
-
+<div> 
+	<legend>Step 3: Select Method Payment</legend>
+	<h5 class="label label-warning">Reservation summary</h5>
+	<div class="divInfoMovie">
+		<label class="myLabelTitle">Theater</label> 
+		<label class="myLabelInfo">{{filter.theaterSelected.name}}</label>
+	</div>
+	<div class="divInfoMovie">
+		<label class="myLabelTitle">Movie</label> 
+		<label class="myLabelInfo">{{filter.movieSelected.title}}</label>
+	</div>
+	<div class="divInfoMovie" style="float: right";>
+		<label class="myLabelTitle">Quantity:</label> 
+		<label class="myLabelInfo">{{filter.quantitySelected}}</label>
+	</div>
+	<div class="divInfoMovie">
+		<label class="myLabelTitle">Show Time</label> 
+		<label class="myLabelInfo">{{filter.showTimeSelected.schedules.time}}</label>
+	</div>
+	<div class="divInfoMovie">
+		<label class="myLabelTitle">Sities:</label> 
+		<label class="myLabelInfo">{{filter.sitiesSelectedText}}</label>
+	</div>
+	<h5 class="label label-warning">Personal information</h5>
+	<div class="divInfoMovie">
+		<label class="myLabelTitle">Method Payment:</label> 
+			<select id="stMethodPayment"
+				ng-model="filter.methodPaymentSelected"
+				ng-options="methodPayment.name for methodPayment in methodsPayment">
+			<option style="display:none" value="">Select Method Payment</option>	
+		</select>
+	</div>
+	<div class="divInfoMovie">
+		<label class="myLabelTitle">Email:</label> 
+		<input type="text" ng-model="filter.email"></input>
+    </div>
+    <div class="divInfoMovie">
+		<label class="myLabelTitle">Dni:</label> 
+        <input type="text" ng-model="filter.dni"></input>
+    </div>
+	<a class="btn btn-success" ng-click="lastStep()" ng-show="filter.methodPaymentSelected && filter.email && filter.dni">BUY</a>
 </div>
-</script>

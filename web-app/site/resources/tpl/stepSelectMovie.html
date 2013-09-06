@@ -1,43 +1,46 @@
-<div ng-controller="reservationMovieCtrl">
-<!-- <div> -->
+<div>
 	<form>
-		<fieldset style="width: 70px;">
-			<legend>Buy movie online</legend>
-			<div class="clearfix">
-				<label for="normalSelect">Theater:</label> 
+		<fieldset> 
+			<legend>Step 1: Buy movie online</legend>
+			<div>
+				<label class="myLabelTitle">Theater:</label> 
 				<select id="stTheater"
 					ng-model="filter.theaterSelected"
-					ng-change="updateTheaterSelected(filter.theaterSelected)"
+					ng-change="updateTheaterSelected()"
 					ng-options="theater.name for theater in theaters">
 					<option style="display:none" value="">Select Theater</option>
 				</select>
 			</div>
-			<div class="clearfix">
-				<label for="normalSelect">Movie:</label> 
+			<div>
+				<div>
+					<label class="myLabelTitle" style="float: left;">Movie:</label> 
+					<a id="btnMoreDetail" class="btn btn btn-info" ng-href="#/movies/{{filter.movieSelected.id}}"
+						ng-disabled="!filter.movieSelected">More detail</a>
+				</div>
 				<select id="stMovie"
 					ng-model="filter.movieSelected"
 					ng-disabled="!filter.theaterSelected"
-					ng-change="updateMovieSelected(filter.movieSelected)"
-					ng-options="movie.name for movie in movies">
+					ng-change="updateMovieSelected()"
+					ng-options="movie.title for movie in movies">
 				<option style="display:none" value="">Select Movie</option>
 				</select>
 			</div>
-			<div class="clearfix">
-				<label for="normalSelect">Time:</label> 
+			<div>
+				<label class="myLabelTitle">Time:</label> 
 				<select id="stShowTimes"
 					ng-model="filter.showTimeSelected"
 					ng-disabled="!(filter.theaterSelected && filter.movieSelected)"
-					ng-change="updateShowTimeSelected(filter.showTimeSelected)"
-					ng-options="showTime.name for showTime in showTimes">
+					ng-change="updateShowTimeSelected()"
+					ng-options="showTime.schedules.time for showTime in showTimes">
 				<option style="display:none" value="">Select Time</option>	
 				</select>
 			</div>
 			<div class="divInfoMovie" ng-show="filter.movieSelected">
-					<label class="labelMovie">Description:</label> 
-					<textarea class="xxlarge" name="textarea" ng-model="description" rows="21" disabled></textarea>
+				<label class="myLabelTitle">Description:</label> 
+				<textarea class="xxlarge" name="textarea" ng-model="summary" rows="18" disabled></textarea>
 			</div>
 		</fieldset>
-		 <td><a class="btn" ng-href="#/xxx/?movie=1&theater=1&showTime=1"
-		 ng-show="filter.theaterSelected && filter.movieSelected && filter.showTimeSelected">BUY</a></td>
+		 <td><a class="btn btn-success" ng-click="navigateUrl()"
+		 ng-show="filter.theaterSelected && filter.movieSelected && filter.showTimeSelected && showButton">BUY</a></td>
 	</form>
 </div>

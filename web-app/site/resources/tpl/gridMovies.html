@@ -1,18 +1,14 @@
-<div class="container" ng-controller="moviesCtrl" style="float: left; padding: 10px 10px 10px 60px; margin-left: auto;
-margin-right: auto; width: 70%">
-	<div class="row" >
-		<span class="ng-scope" ng-repeat="movie in movies">
-			<div class="span2" style="width: 230px;">
-				<div class="thumbnail">
-			     <a ng-href="#/movies/{{movie.id}}" alt="View details" role="button" data-toggle="modal" >
-			     	<img alt="" style="height:310px; width:209px;" ng-src="{{movie.url}}">
+<div class="row" >
+	<span class="ng-scope" ng-repeat="movie in movies">
+		<div class="span3">
+			<div class="thumbnail">
+			     <a ng-href="#/movies/{{movie.id}}" role="button" data-toggle="modal" >
+			     	<img id="imgPictureMovie" alt=""  ng-src="{{movie.picUrl}}">
 			     </a>
-			     <div class="caption product-detail-center">
-			       <h5 class="ng-binding">{{movie.name}}</h5>
-<!-- 			       <p><a href="" class="btn btn-primary"><i class="icon-shopping-cart icon-white"></i>Buy</a></p> -->
-			     </div>
-		  	  </div>
-		  	  </div>
-		</span>
-	</div>
+		     	<div class="caption product-detail-center">
+		       		<h5 class="label label-important">{{movie.title}}</h5>
+		     	</div>
+	  	   </div>
+	    </div>
+	</span>
 </div>

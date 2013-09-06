@@ -1,0 +1,189 @@
+/*
+* This is file is a mock only because required library angular-mocks
+*/
+
+/* showTimes
+
+//var aa = [
+//		    {
+//		        "movie": {
+//		            "id": 2304,
+//		            "title": "lalala"
+//		        },
+//		        "theater": {
+//		            "id": 30,
+//		            "name": "cinemark palmares"
+//		        },
+//		        "showTime": {
+//		            "schedule": "17:00 primnera",
+//		            "id": 1,
+//		            "left": [
+//		                {
+//		                    "row": 20,
+//		                    "column": 2,
+//		                    "occupied": [{
+//	                            "row": 1,
+//	                            "column": 1
+//	                        }],
+//		                }
+//		            ],
+//		            "center": [
+//		                {
+//		                    "row": 20,
+//		                    "column": 20,
+//		                    "occupied": [
+//		                        {
+//		                            "row": 1,
+//		                            "column": 4
+//		                        },
+//		                        {
+//		                            "row": 1,
+//		                            "column": 5
+//		                        },
+//		                        {
+//		                            "row": 6,
+//		                            "column": 7
+//		                        },
+//		                        {
+//		                            "row": 3,
+//		                            "column": 2
+//		                        },
+//		                        {
+//		                            "row": 5,
+//		                            "column": 4
+//		                        }
+//		                    ]
+//		                }
+//		            ],
+//		            "right": [
+//		                {
+//		                    "row": 20,
+//		                    "column": 3,
+//		                    "occupied": [
+//		                        {
+//		                            "row": 1,
+//		                            "column": 3
+//		                        }
+//		                    ]
+//		                }
+//		            ]
+//		        }
+//		    },
+//		    {
+//		        "movie": {
+//		            "id": 2304,
+//		            "title": "lalala"
+//		        },
+//		        "theater": {
+//		            "id": 30,
+//		            "name": "cinemark palmares"
+//		        },
+//		        "showTime": {
+//		            "schedule": "17:00 segunda",
+//		            "id": 2,
+//		            "left": [
+//		                {
+//		                    "row": 20,
+//		                    "column": 4,
+//		                    "occupied": [{
+//	                            "row": 1,
+//	                            "column": 1
+//	                        }],
+//		                }
+//		            ],
+//		            "center": [
+//		                {
+//		                    "row": 20,
+//		                    "column": 20,
+//		                    "occupied": [
+//		                        {
+//		                            "row": 1,
+//		                            "column": 4
+//		                        }
+//		                    ]
+//		                }
+//		            ],
+//		            "right": [
+//		                {
+//		                    "row": 20,
+//		                    "column": 3,
+//		                    "occupied": [
+//		                        {
+//		                            "row": 1,
+//		                            "column": 2
+//		                        }
+//		                    ]
+//		                }
+//		            ]
+//		        }
+//		    }
+//		];
+//	return aa
+
+
+  	var a = [ {
+	                	      "id": 1,
+		                      "title": "Los indestructibles",
+		                      "imdbId": "aksdjfk",
+		                      "summary": "La primera parte del filme parte con una operaci n de rescate de The Expendables contra piratas somal es que toman como rehenes a la tripulaci n de un barco estadounidense.",
+		                      "actors": "Jet Li, Bruce Willis, etc",
+		                      "picUrl": "./resources/img/movies/1.jpg",
+		                      "trailerUrl": "http://www.youtube.com/embed/30v_FQxGmaA",
+		                      "genre": "Accion",
+		                      "director": "Sylvester Stallone",
+		                      "year": 2010,
+		                      "cinemaType": "3D"
+	            		}, 
+	            		{
+	                	      "id": 1,
+		                      "title": "Los indestructibles",
+		                      "imdbId": "aksdjfk",
+		                      "summary": "La primera parte del filme parte con una operaci n de rescate de The Expendables contra piratas somal es que toman como rehenes a la tripulaci n de un barco estadounidense.",
+		                      "actors": "Jet Li, Bruce Willis, etc",
+		                      "picUrl": "./resources/img/movies/2.jpg",
+		                      "trailerUrl": "http://www.youtube.com/embed/30v_FQxGmaA",
+		                      "genre": "Accion",
+		                      "director": "Sylvester Stallone",
+		                      "year": 2010,
+		                      "cinemaType": "3D"
+	            		},
+	            		{
+	                	      "id": 1,
+		                      "title": "Los indestructibles",
+		                      "imdbId": "aksdjfk",
+		                      "summary": "La primera parte del filme parte con una operaci n de rescate de The Expendables contra piratas somal es que toman como rehenes a la tripulaci n de un barco estadounidense.",
+		                      "actors": "Jet Li, Bruce Willis, etc",
+		                      "picUrl": "./resources/img/movies/3.jpg",
+		                      "trailerUrl": "http://www.youtube.com/embed/30v_FQxGmaA",
+		                      "genre": "Accion",
+		                      "director": "Sylvester Stallone",
+		                      "year": 2010,
+		                      "cinemaType": "3D"
+	            		},
+	            		{
+	                	      "id": 1,
+		                      "title": "Los indestructibles",
+		                      "imdbId": "aksdjfk",
+		                      "summary": "La primera parte del filme parte con una operaci n de rescate de The Expendables contra piratas somal es que toman como rehenes a la tripulaci n de un barco estadounidense.",
+		                      "actors": "Jet Li, Bruce Willis, etc",
+		                      "picUrl": "./resources/img/movies/4.jpg",
+		                      "trailerUrl": "http://www.youtube.com/embed/30v_FQxGmaA",
+		                      "genre": "Accion",
+		                      "director": "Sylvester Stallone",
+		                      "year": 2010,
+		                      "cinemaType": "3D"
+	            		},
+	            		{
+	                	      "id": 1,
+		                      "title": "Los indestructibles",
+		                      "imdbId": "aksdjfk",
+		                      "summary": "La primera parte del filme parte con una operaci n de rescate de The Expendables contra piratas somal es que toman como rehenes a la tripulaci n de un barco estadounidense.",
+		                      "actors": "Jet Li, Bruce Willis, etc",
+		                      "picUrl": "./resources/img/movies/5.jpg",
+		                      "trailerUrl": "http://www.youtube.com/embed/30v_FQxGmaA",
+		                      "genre": "Accion",
+		                      "director": "Sylvester Stallone",
+		                      "year": 2010,
+		                      "cinemaType": "3D"
+	            		}]
+	            	return a;

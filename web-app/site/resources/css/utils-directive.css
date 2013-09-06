@@ -1,0 +1,41 @@
+/**
+* 	Css directive "makeChairs"
+*/
+.chair{
+  margin: 0;
+  padding: 0;
+}
+
+ul.chair {
+  display: inline-block;
+}
+
+.chair li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chair .filled {
+  background-image : url("./img/face_monkey_48.png");
+  background-position:0px 0px;
+  height: 48px;
+  width: 48px;
+  background-repeat:no-repeat;
+}
+.chair .empty {
+  background-image : url("./img/face_monkey_white_48.png");
+  background-position:0px 0px;
+  background-repeat:no-repeat;
+  height: 48px;
+  width: 48px;
+}
+.chairValue {
+	font-size: 48px;
+	color: #15E94A;
+	float: left;
+	margin-top: 13px;
+}

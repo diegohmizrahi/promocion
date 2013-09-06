@@ -1,34 +1,44 @@
-<div class="container" style="padding-top: 30px;">
-<div class="center">
-			<legend>
-				<label class="titleMovie">{{movie.name}}</label>
-			</legend>
-			<div style="float: left; padding-right:30px; padding-right:200px">
-				<div class="divInfoMovie">
-					<label class="labelMovie">Description:</label> 
-					<textarea class="xxlarge" name="textarea" ng-model="movie.description" rows="3" disabled
-					style="width: 670px; height: 90px;"></textarea>
-				</div>
-				<div class="divInfoMovie">
-					<label class="labelMovie">Actors:</label> 
-					<input type="text" ng-model="movie.actors" disabled
-					style="width: 670px;"/>
-				</div>
-				<div class="divInfoMovie">
-					<label class="labelMovie">Genre:</label> 
-					<input type="text" ng-model="movie.genre" disabled
-					style="width: 670px;"/>
-				</div>
-			</div>
-			<div>
-				<img alt="" ng-src="{{movie.urlImage}}">
-			</div>
-			<div style="padding-top: 10px;">
-				<center>
-					<iframe id="ctl00_slotContent_ifTrailer" width="410" height="250"
-						ng-src="{{movie.urlTrailer}}" frameborder="0"
-						allowfullscreen=""></iframe>
-				</center>
-			</div>
-			</div>
+<div class="container">
+	<legend style="width: 100%;">
+		<label class="titleMovie">{{movie.title}}</label>
+	</legend>
+	<div class="boxDetailMovie">
+		<div class="clearfix">
+			<label class="myLabelTitle">ImdbId:</label> 
+			<input class="span1" type="text" ng-model="movie.imdbId" disabled />
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Genre:</label> 
+			<input class="span2" type="text" ng-model="movie.genre" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">CinemaType:</label> 
+			<input class="span2" type="text" ng-model="movie.cinemaType" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Summary:</label> 
+			<textarea class="span7" name="textarea" ng-model="movie.summary" rows="5" disabled></textarea>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Director:</label> 
+			<input class="span5" type="text" ng-model="movie.director" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Actors:</label> 
+			<input class="span5" type="text" ng-model="movie.actors" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Year:</label> 
+			<input class="span1" type="text" ng-model="movie.year" disabled/>
+		</div>
+		<div>
+			<a class="btn btn-success" ng-href="#/index">RETURN</a>
+		</div>
+	</div>
+	<div>
+		<img id="imgPictureMovie" alt="" ng-src="{{movie.picUrl}}">
+		<iframe id="iframeTrailer" width="410" height="250"
+			ng-src="{{movie.trailerUrl}}" frameborder="0"
+			allowfullscreen=""></iframe>
+	</div>
 </div>

@@ -1,28 +1,121 @@
-.gridMovies {
+/**
+* Css General
+*/
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image : url("../img/background2.jpg");
+}
+legend {
+ 	color: #FC0606;
+ 	width: initial;
+}
+#iframeTrailer {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#imgPictureMovie {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	height:310px; 
+	width:209px;	
+}
+#imgReserved {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	height:170px; 
+	width:320px;	
+}
+#divImgCinema {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+#divQuantity {
+	margin-left: 30%;
+}
+#divSectionCinema {
 	float: left;
-	width: 1120px;
-	padding: 10px 10px 10px 10px;
+	padding-right: 20px;
+}
+#btnMoreDetail {
+	height: 17px;
+	/* margin-left: 10px; */
+	float: right;
+	padding-top: 0px;
+	padding-right: 4px;
+	padding-bottom: 0px;
+	padding-left: 4px;
 }
 
-.center {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.titleMovie {
+.titleMovie { 
 	text-align: center;
 	font-size: 60px;
 	height: 50px;
 	font-family: cursive;
 	color: #1DAB70;
+	padding-top: 30px;
 }
-
-.labelMovie {
+.myLabelTitle {
 	font-size: 20px;
-	color: #B40431;
+	color: #0C5F1F;
 }
-
+.myLabelInfo {
+	color: #FFFFFF;
+}
 .divInfoMovie {
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+.boxSelectMovie {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.boxSelectSitie {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+.boxSelectMethodPayment {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;	
+	width: 300px;
+}
+.boxPaymentConfirmation {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}	
+.boxDetailMovie {
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;	
+}
+.boxGridMovie {
+	float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;	
+	width: 70%;
+	text-align: center;
+}
+.boxSelectMovie {
+	float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;	
+}
+.textCenter {
+	text-align: center;
 }

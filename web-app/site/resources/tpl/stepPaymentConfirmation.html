@@ -1,0 +1,51 @@
+<div class="container">
+	<legend style="width: 100%;">
+		<label class="titleMovie">{{info.movieSelected.title}}</label>
+	</legend>
+	<div class="boxDetailMovie">
+		<div class="clearfix">
+			<label class="myLabelTitle">Theater:</label> 
+			<input class="span2" type="text" ng-model="info.theaterSelected.name" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Show Time:</label> 
+			<input class="span2" type="text" ng-model="info.showTimeSelected.schedules.time" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Sities:</label> 
+			<input class="span7" name="textarea" ng-model="info.sitiesSelectedText" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Quantity:</label> 
+			<input class="span1" type="text" ng-model="info.quantitySelected" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Email:</label> 
+			<input class="span4" type="text" ng-model="info.email" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Dni:</label> 
+			<input class="span2" type="text" ng-model="info.dni" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Method Payment:</label> 
+			<input class="span4" type="text" ng-model="info.methodPaymentSelected.name" disabled/>
+		</div>
+		<div class="clearfix">
+			<label class="myLabelTitle">Method Payment:</label> 
+			<input class="span4" type="text" ng-model="info.methodPaymentSelected.name" disabled/>
+		</div>
+		
+		<div>
+			<a class="btn btn-success" ng-href="#/index">END</a>
+		</div>
+	</div>
+	<div style="float: right;">
+		<img id="imgReserved" src="./resources/img/reserved.png" alt="" >
+		<div class="clearfix">
+			<label class="myLabelTitle">Code Confirmation:</label> 
+			<input class="span4 textCenter" type="text" ng-model="info.confirmationCode" disabled/>
+		</div>	
+		<img id="imgPictureMovie" alt="" ng-src="{{info.movieSelected.picUrl}}">
+	</div>
+</div>
