@@ -69,7 +69,7 @@ class BootStrap {
 						).save(flush: true)
 
 
-					def cinema3 = Cinema.findAllByTheater(theater2)?: new Cinema(
+					def cinema3 = new Cinema(
 						cinemaNumber: 1,
 						cinemaType: CinemaType.XD,
 						theater: theater2
@@ -179,10 +179,10 @@ class BootStrap {
 						summary:"Cuando a la tripulacion de la nave Enterprise le ordenan que regrese a casa, en la Tierra se enfrentan a una terrorifica fuerza que, aparentemente desde dentro....",
 						actors:"Chris Pine, Zachary Quinto, Zoe Saldana, etc",
 						picUrl:"http://columnazero.com/wp-content/uploads/2013/06/star-trek-en-la-oscuridad.jpg",
-						trailerUrl:"https://youtube.googleapis.com/v/FFAiOtL_rNo%26autoplay=%26loop=0%26rel=0",
+						trailerUrl:"http://columnazero.com/wp-content/uploads/2013/06/star-trek-en-la-oscuridad.jpg",
 						genre:"Ciencia Ficcion",
-						director:"-",
-						year: 2012
+						director:"NA",
+						year: 2013
 					).save(flush:true)
 
 					def movie4 = new Movie(
@@ -190,11 +190,11 @@ class BootStrap {
 						imdbId: "1110099",
 						summary:"Narra el asalto de la Casa Blanca por parte de un grupo de paramilitares.",
 						actors:"Channing Tatum y Jamie Foxx, etc",
-						picUrl:"http://daysmovie.files.wordpress.com/2013/09/white_house_down_theatrical_poster.jpg?w=202&h=300",
-						trailerUrl:"http://daysmovie.files.wordpress.com/2013/09/white_house_down_theatrical_poster.jpg?w=202&h=300",
+						picUrl:"http://daysmovie.files.wordpress.com/2013/09/white_house_down_theatrical_poster.jpg",
+						trailerUrl:"http://daysmovie.files.wordpress.com/2013/09/white_house_down_theatrical_poster.jpg",
 						genre:"Accion",
 						director:"Rolan Emmerich",
-						year: 2010
+						year: 2013
 					).save(flush:true)
 					
 					
@@ -216,7 +216,7 @@ class BootStrap {
 					
 					def showTime3 = new ShowTime(
 						price: 11,
-						movie: movie4,
+						movie: movie2,
 						fromDate: new Date().clearTime(),
 						untilDate: new Date().clearTime()+10,
 						cinema: cinema3
@@ -224,7 +224,7 @@ class BootStrap {
 
 					def showTime4 = new ShowTime(
 						price: 12,
-						movie: movie2,
+						movie: movie4,
 						fromDate: new Date().clearTime(),
 						untilDate: new Date().clearTime()+10,
 						cinema: cinema
@@ -232,7 +232,7 @@ class BootStrap {
 					
 					def showTime5 = new ShowTime(
 						price: 14,
-						movie: movie3,
+						movie: movie,
 						fromDate: new Date().clearTime(),
 						untilDate: new Date().clearTime()+10,
 						cinema: cinema2
@@ -273,7 +273,7 @@ class BootStrap {
 					def schedule2 = new Schedule(
 							time: "22:30",
 							showTime: showTime2,
-							takenSeats: [seat]
+							takenSeats: [seat2]
 							)
 							
 					def schedule3 = new Schedule(
@@ -291,7 +291,7 @@ class BootStrap {
 					def schedule5 = new Schedule(
 							time: "23:30",
 							showTime: showTime5,
-							takenSeats: [seat2]
+							takenSeats: [seat]
 							)
 							
 					def schedule6 = new Schedule(
@@ -299,15 +299,14 @@ class BootStrap {
 							showTime: showTime6,
 							takenSeats: [seat2]
 							)
-																	
-					showTime.addToSchedules(schedule).save(flush:true)				
-					showTime2.addToSchedules(schedule2).save(flush:true)
-					showTime3.addToSchedules(schedule3).save(flush:true)					
-					showTime4.addToSchedules(schedule4).save(flush:true)				
-					showTime5.addToSchedules(schedule5).save(flush:true)
-					showTime6.addToSchedules(schedule6).save(flush:true)
+												
+					showTime.addToSchedules(schedule).save(flush:true,failOnError:true)					
 
-
+					showTime2.addToSchedules(schedule2).save(flush:true,failOnError:true)
+					showTime3.addToSchedules(schedule3).save(flush:true,failOnError:true)					
+					showTime4.addToSchedules(schedule4).save(flush:true,failOnError:true)				
+					showTime5.addToSchedules(schedule5).save(flush:true,failOnError:true)
+					showTime6.addToSchedules(schedule6).save(flush:true,failOnError:true)
 						
 		}
 						
