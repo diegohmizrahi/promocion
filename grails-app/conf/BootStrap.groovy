@@ -64,13 +64,13 @@ class BootStrap {
 
 					def cinema2 = Cinema.findAllByTheater(theater)?: new Cinema(
 						cinemaNumber: 2,
-						cinemaType: CinemaType.CINEMA3D,
+						cinemaType: CinemaType.XD,
 						theater: theater
 						).save(flush: true)
 
 					def cinema3 = Cinema.findAllByTheater(theater)?: new Cinema(
 						cinemaNumber: 1,
-						cinemaType: CinemaType.CINEMA3D,
+						cinemaType: CinemaType.XD,
 						theater: theater2
 						).save(flush: true)
 
