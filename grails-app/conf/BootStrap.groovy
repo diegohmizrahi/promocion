@@ -220,8 +220,6 @@ class BootStrap {
 						cinema: cinema3
 						).save(flush:true)
 						
-						
-						
 					
 					def seat = new Seat(
 							row: 2,
@@ -235,34 +233,38 @@ class BootStrap {
 							time: "22:00",
 							showTime: showTime,
 							takenSeats: [seat]
-							).save(flush:true)		
+							)
+							
 					def schedule2 = new Schedule(
 							time: "22:00",
 							showTime: showTime2,
 							takenSeats: [seat]
-							).save(flush:true)
+							)
+							
 					def schedule3 = new Schedule(
 							time: "22:00",
 							showTime: showTime3,
 							takenSeats: [seat]
-							).save(flush:true)
+							)
+							
 					def schedule4 = new Schedule(
 							time: "22:00",
 							showTime: showTime4,
 							takenSeats: [seat]
-							).save(flush:true)		
+							)
+							
 					def schedule5 = new Schedule(
 							time: "22:00",
 							showTime: showTime5,
 							takenSeats: [seat]
-							).save(flush:true)
+							)
+							
 					def schedule6 = new Schedule(
 							time: "22:00",
 							showTime: showTime6,
 							takenSeats: [seat]
-							).save(flush:true)
-										
-										
+							)
+																	
 					showTime.addToSchedules(schedule).save(flush:true)				
 					showTime2.addToSchedules(schedule2).save(flush:true)
 					showTime3.addToSchedules(schedule3).save(flush:true)					
