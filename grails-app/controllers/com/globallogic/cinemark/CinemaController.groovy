@@ -311,19 +311,19 @@ class CinemaController extends CinemarkController {
 							time: "22:00",
 							showTime: showTime,
 							takenSeats: [seat]
-							)
+							).save(flush:true)
 						showTime.addToSchedules(schedule).save(flush:true)
 					def schedule2 = new Schedule(
 							time: "22:00",
 							showTime: showTime2,
 							takenSeats: [seat]
-							)
+							).save(flush:true)
 						showTime2.addToSchedules(schedule2).save(flush:true)
 					def schedule3 = new Schedule(
 							time: "22:00",
 							showTime: showTime3,
 							takenSeats: [seat]
-							)
+							).save(flush:true)
 						showTime3.addToSchedules(schedule3).save(flush:true)
 
 	}
