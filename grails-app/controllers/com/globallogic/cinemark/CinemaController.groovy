@@ -5,6 +5,18 @@ import com.globallogic.cinemark.utils.ValidatorUtils
 import com.globallogic.cinemark.utils.DateUtils
 import com.globallogic.cinemark.constants.Codes
 import com.globallogic.cinemark.exceptions.CinemarkException
+import com.globallogic.cinemark.Theater
+import com.globallogic.cinemark.Cinema
+import com.globallogic.cinemark.Seat
+import com.globallogic.cinemark.Movie
+import com.globallogic.cinemark.SeatSection
+import com.globallogic.cinemark.ShowTime
+import com.globallogic.cinemark.Schedule
+import com.globallogic.cinemark.enums.CinemaType
+import com.globallogic.cinemark.enums.SeatsSectionType;
+
+
+
 
 class CinemaController extends CinemarkController {
 
