@@ -47,27 +47,27 @@ class BootStrap {
 							phone: 94983498349
 						).save(flush: true)
 
-					def theater2 = Theater.findByName("Palmares") ?: new Theater(
+
+						def theater2 = Theater.findByName("Shopping") ?: new Theater(
 							name: "Shopping",
 							address: "panamericana S/N",
 							phone: 55555555559
 						).save(flush: true)
 
-						
-						
-					def cinema = Cinema.findAllByTheater(theater)?: new Cinema(
+						def cinema = Cinema.findAllByTheater(theater)?: new Cinema(
 						cinemaNumber: 1,
 						cinemaType: CinemaType.XD,
 						theater: theater
 						).save(flush: true)
 
-					def cinema2 = Cinema.findAllByTheater(theater)?: new Cinema(
+
+						def cinema2 = new Cinema(
 						cinemaNumber: 2,
 						cinemaType: CinemaType.XD,
 						theater: theater
 						).save(flush: true)
 
-					def cinema3 = Cinema.findAllByTheater(theater)?: new Cinema(
+					def cinema3 = Cinema.findAllByTheater(theater2)?: new Cinema(
 						cinemaNumber: 1,
 						cinemaType: CinemaType.XD,
 						theater: theater2
@@ -160,10 +160,10 @@ class BootStrap {
 
 
 
-					def movie2 = Movie.findByTitle("Los Indestructibles")?: new Movie(
-						title: "Los indestructibles",
+					def movie2 = new Movie(
+						title: "Los indestructibles 2",
 						imdbId: "aksdjfk",
-						summary:"La primera parte del filme parte con una operación de rescate de The Expendables contra piratas somalíes que toman como rehenes a la tripulación de un barco estadounidense.",
+						summary:"La segunda parte del filme parte con una operación de rescate de The Expendables contra piratas somalíes que toman como rehenes a la tripulación de un barco estadounidense.",
 						actors:"Jet Li, Bruce Willis, etc",
 						picUrl:"http://upload.wikimedia.org/wikipedia/commons/thumb/5/57/The_Expendables_Comic-Con_Panel.jpg/800px-The_Expendables_Comic-Con_Panel.jpg",
 						trailerUrl:"http://upload.wikimedia.org/wikipedia/commons/thumb/5/57/The_Expendables_Comic-Con_Panel.jpg/800px-The_Expendables_Comic-Con_Panel.jpg",
@@ -172,10 +172,108 @@ class BootStrap {
 						year: 2010
 					).save(flush:true)
 
+					def showTime = new ShowTime(
+						price: 12,
+						movie: movie,
+						fromDate: new Date().clearTime(),
+						untilDate: new Date().clearTime()+10,
+						cinema: cinema
+						).save(flush:true)
 					
+					def showTime2 = new ShowTime(
+						price: 14,
+						movie: movie,
+						fromDate: new Date().clearTime(),
+						untilDate: new Date().clearTime()+10,
+						cinema: cinema2
+						).save(flush:true)
+					
+					def showTime3 = new ShowTime(
+						price: 11,
+						movie: movie,
+						fromDate: new Date().clearTime(),
+						untilDate: new Date().clearTime()+10,
+						cinema: cinema3
+						).save(flush:true)
+
+					def showTime4 = new ShowTime(
+						price: 12,
+						movie: movie2,
+						fromDate: new Date().clearTime(),
+						untilDate: new Date().clearTime()+10,
+						cinema: cinema
+						).save(flush:true)
+					
+					def showTime5 = new ShowTime(
+						price: 14,
+						movie: movie2,
+						fromDate: new Date().clearTime(),
+						untilDate: new Date().clearTime()+10,
+						cinema: cinema2
+						).save(flush:true)
+					
+					def showTime6 = new ShowTime(
+						price: 11,
+						movie: movie2,
+						fromDate: new Date().clearTime(),
+						untilDate: new Date().clearTime()+10,
+						cinema: cinema3
+						).save(flush:true)
+						
+						
+						
+					
+					def seat = new Seat(
+							row: 2,
+							seatSection: SeatsSectionType.LEFT,
+							column: 3,
+							email: "tetin@te.com",
+							confirmationCode:"aslhj399",
+							identificationNumber:39939493).save(flush:true)
+					
+					def schedule = new Schedule(
+							time: "22:00",
+							showTime: showTime,
+							takenSeats: [seat]
+							).save(flush:true)		
+					def schedule2 = new Schedule(
+							time: "22:00",
+							showTime: showTime2,
+							takenSeats: [seat]
+							).save(flush:true)
+					def schedule3 = new Schedule(
+							time: "22:00",
+							showTime: showTime3,
+							takenSeats: [seat]
+							).save(flush:true)
+					def schedule4 = new Schedule(
+							time: "22:00",
+							showTime: showTime4,
+							takenSeats: [seat]
+							).save(flush:true)		
+					def schedule5 = new Schedule(
+							time: "22:00",
+							showTime: showTime5,
+							takenSeats: [seat]
+							).save(flush:true)
+					def schedule6 = new Schedule(
+							time: "22:00",
+							showTime: showTime6,
+							takenSeats: [seat]
+							).save(flush:true)
+										
+										
+					showTime.addToSchedules(schedule).save(flush:true)				
+					showTime2.addToSchedules(schedule2).save(flush:true)
+					showTime3.addToSchedules(schedule3).save(flush:true)					
+					showTime4.addToSchedules(schedule).save(flush:true)				
+					showTime5.addToSchedules(schedule2).save(flush:true)
+					showTime6.addToSchedules(schedule3).save(flush:true)
 
 
-						}
+						
+		}
+						
     }
     def destroy = {
     }
